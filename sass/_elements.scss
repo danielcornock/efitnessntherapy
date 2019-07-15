@@ -1,0 +1,135 @@
+.cta{
+    padding: 8px 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    transition: 250ms;
+    position: relative;
+    z-index: 5;
+
+    &--primary{
+        border: 2px solid $primary;
+        background-color: $primary;
+        color: $white;
+
+        &:hover{
+            background-color: $white;
+            color: $primary;
+            border: 2px solid $white;
+        }
+    }
+    &--secondary{
+        border: 2px solid $primary;
+        color: $primary;
+
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &--orange{
+        border: 2px solid $secondary;
+        background-color: $secondary;
+        color: $white;
+
+        &:hover{
+            background-color: $white;
+            color: $secondary;
+            border: 2px solid $white;
+        }
+    }
+}
+
+.section-header{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 70px;
+    position: relative;
+
+    &--green{
+        color: $primary;
+    }
+
+    &--blue{
+        color: $blue;
+    }
+
+    @media (min-width: $large-phone){
+        font-size: 42px;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        left: 50%;
+        background-color: rgba($primary,1);
+        transform: translateX(-50%);
+        height: 4px;
+        width: 60px;
+        bottom: -5px;
+        background-color: $primary;
+    }
+}
+
+.flex-horizontal{
+    @media (min-width: $tablet){
+        display: flex;
+        align-items: center;
+        
+        
+    }
+}
+
+.bubble{
+    border-radius: 100px;
+    position: absolute;
+    z-index: 1;
+    &.small{
+        height: 40px;
+        width: 40px;
+    }
+
+    &.medium{
+        height: 90px;
+        width: 90px;
+    }
+
+    &.large{
+        height: 150px;
+        width: 150px;
+    }
+
+    &.green{
+        background-color: rgba($primary,0.1);
+    }
+
+    &.orange{
+        background-color: rgba($secondary,0.1);
+    }
+
+    &.tr{
+        top: 30px;
+        right: 250px;
+    }
+
+    &.br{
+        bottom: 40px;
+        right: 50px;
+    }
+
+    &.bl{
+        bottom: 20px;
+        left: 90px;
+    }
+
+    &.tl{
+        top: 20px;
+        left: 230px;
+    }
+
+    &.c{
+        top: 50%;
+        left: 40%
+    }
+}

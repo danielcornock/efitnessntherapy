@@ -1,0 +1,56 @@
+.footer{
+    background-color: $blue;
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        color: $white;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    &__link{
+        color: $primary;
+        display: inline;
+        transition: 250ms;
+
+        &:hover{
+            color: $secondary;
+        }
+    }
+
+    &__copyright{
+        text-align: left;
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            height: 40px;
+            width: 40px;
+            margin-right: 30px;
+            background-color: $primary;
+            transition: 250ms;
+            &:last-of-type{
+                margin-right: 0;
+            }
+
+            &:hover{
+                background-color: $secondary;
+            }
+        }
+        &-icon{
+            color: $blue;
+            font-size: 22px;
+        }
+    }
+
+    &__credits{
+        text-align: right;
+    }
+}
