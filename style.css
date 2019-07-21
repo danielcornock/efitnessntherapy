@@ -34,6 +34,10 @@ body {
   padding: 10px 30px;
 }
 
+.container--slim {
+  max-width: 800px;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -54,6 +58,10 @@ p:last-of-type {
 
 .green {
   color: #5DD184;
+}
+
+.blue {
+  color: #464353;
 }
 
 .header {
@@ -399,6 +407,48 @@ p:last-of-type {
   }
 }
 
+.hello {
+  background-color: #5DD184;
+}
+
+.hello__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hello__svg {
+  height: 250px;
+}
+
+.hello__title-above {
+  color: #22773F !important;
+}
+
+.hello__subtitle {
+  color: #464353 !important;
+}
+
+.hello__header {
+  background-color: #E79A6D;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.hello__link {
+  display: inline;
+  color: #464353;
+  font-weight: 600;
+}
+
 .footer {
   background-color: #464353;
 }
@@ -535,8 +585,9 @@ p:last-of-type {
 }
 
 .intro__title-above {
-  font-size: 18px;
+  font-size: 20px;
   color: #E79A6D;
+  font-weight: 700;
 }
 
 .intro__subtitle {
@@ -656,6 +707,18 @@ p:last-of-type {
 .physio-note__text {
   font-size: 20px;
   color: white;
+}
+
+.about-me {
+  background-color: rgba(93, 209, 132, 0.4);
+}
+
+.about-me__text {
+  line-height: 2;
+}
+
+.about-me__text > p {
+  margin-bottom: 20px;
 }
 
 .testimonials {

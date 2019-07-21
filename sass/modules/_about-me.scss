@@ -1,0 +1,10 @@
+.about-me{
+    background-color: rgba($primary,0.4);
+    &__text{
+        line-height: 2;
+
+        &>p{
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -49,8 +49,9 @@
         }
 
         &-above{
-            font-size: 18px;
+            font-size: 20px;
             color: $secondary;
+            font-weight: 700;
         }
     }
     &__subtitle{
@@ -106,9 +107,6 @@
         }
 
         
-    }
-
-    &__text{
     }
 
     &__icon{

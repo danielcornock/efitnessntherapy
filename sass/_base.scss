@@ -27,6 +27,9 @@ body{
     &--contact-bar{
         padding: 10px 30px;
     }
+    &--slim{
+        max-width: 800px;
+    }
 
 }
 
@@ -49,4 +52,8 @@ p{
 
 .green{
     color: $primary;
+}
+
+.blue{
+    color: $blue;
 }

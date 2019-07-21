@@ -111,3 +111,39 @@
         }
     }
 }
+
+.hello{
+    background-color: $primary;
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__svg{
+        height: 250px;
+    }
+    &__title{
+        &-above{
+            color: $primary--dark !important;
+        }
+    }
+
+    &__subtitle{
+        color: $blue !important;
+    }
+
+    &__header{
+        background-color: $secondary;
+        padding: 15px;
+        text-align: center;
+        color: $white;
+    }
+
+    &__link{
+        display: inline;
+        color: $blue;
+        font-weight: 600;
+    }
+}
