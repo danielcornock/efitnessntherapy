@@ -1,0 +1,51 @@
+.testimonials{
+    background-color: rgba($primary,0.3);
+
+    &__content{
+        
+    }
+    &__entry{
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: rgba($white,0.2);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $tablet){
+            grid-template-columns: auto 1fr;
+            padding: 40px;
+        }
+    }
+
+    &__icon{
+        height: 80px;
+        margin: 0 auto 30px auto;
+
+        @media (min-width: $tablet){
+            margin-right: 40px;
+        }
+    }
+
+    &__text{
+        text-align: center;
+        &>p{
+            color: darken($primary, 50%);
+        }
+
+        @media (min-width: $tablet){
+            text-align: left;
+        }
+    }
+
+    &__author{
+        margin-top: 20px;
+        font-weight: 800;
+        font-size: 22px;
+        color: $secondary;
+    }
+}
