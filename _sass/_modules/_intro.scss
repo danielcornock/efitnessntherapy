@@ -1,0 +1,36 @@
+.intro{
+    &-header{
+        color: $primary;
+        font-size: 50px;
+    }
+    &-welcome{
+        margin: var(--spacing--lrg) 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto;
+        grid-gap: var(--spacing--lrg);
+        grid-template-areas:
+            "text image"
+            "footer footer";
+
+        &__text{
+            grid-area: text;
+            font-size: var(--sub-text);
+            color: $primary--dark;
+            font-weight: 500;
+        }
+        &__image{
+            grid-area: image;
+            border-radius: 300px;
+            height: auto;
+            width: 350px;
+        }
+        &__footer{
+            grid-area: footer;
+            font-size: var(--med-text);
+            text-align: center;
+            font-weight: 500;
+            color: $secondary;
+        }
+    }
+}

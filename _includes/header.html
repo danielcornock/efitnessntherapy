@@ -1,26 +1,27 @@
-<header class="header">
+<header class="header highlight--green">
     <div class="header-upper container">
         <div class="branding">
             <span class="branding-text">{{ site.name }}</span><i class="branding-logo fas fa-dumbbell"></i>
         </div>
         <div class="header-contact">
-            <a herf = "#" class="header-contact__icon-container">
-                
-            </a>
-            <a herf = "#" class="header-contact__icon-container">
-
-            </a>
-            <a herf = "#" class="header-contact__icon-container">
-
-            </a>
+            {% for item in site.data.social-icons %}
+                <a href = "{{ item.link }}" class="header-contact__icon-container">
+                    <i class="header-contact__icon {{ item.code }}"></i>
+                </a>
+            {% endfor %}
+            
             <a href = "#" class="cta cta--primary header-contact__cta">
-
+                BOOK NOW
             </a>
         </div>
     </div>
-    <nav class="nav container">
-        <div class="nav__item">
-
-        </div>
-    </nav>
+    <div class="nav">
+        <nav class="container nav-content">
+            {% for item in site.data.navigation %}
+                <a href = "{{ site.url }}{{ item.link }}" class="nav-item">
+                    {{ item.name }}
+                </a>
+            {% endfor %}
+        </nav>
+    </div>
 </header>

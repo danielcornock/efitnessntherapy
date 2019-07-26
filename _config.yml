@@ -1,2 +1,6 @@
 name: efitnessntherapy
-url: https://www.efitnessntherspy.co.uk
+url: https://www.efitnessntherapy.co.uk
+imageUrl: /assets/img
+collections:
+  portfolio:
+    output: false

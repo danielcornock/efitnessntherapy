@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', open-sans;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+    &--section{
+        padding: var(--spacing--lrg) var(--spacing--std);
+    }
+}

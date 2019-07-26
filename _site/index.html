@@ -6,35 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home - </title>
 
+    <link rel="stylesheet" href="http://localhost:4000/style.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header highlight--green">
     <div class="header-upper container">
         <div class="branding">
             <span class="branding-text">efitnessntherapy</span><i class="branding-logo fas fa-dumbbell"></i>
         </div>
         <div class="header-contact">
-            <a herf = "#" class="header-contact__icon-container">
-                
-            </a>
-            <a herf = "#" class="header-contact__icon-container">
-
-            </a>
-            <a herf = "#" class="header-contact__icon-container">
-
-            </a>
+            
+                <a href = "https://www.danielcornock.co.uk" class="header-contact__icon-container">
+                    <i class="header-contact__icon fab fa-instagram"></i>
+                </a>
+            
+                <a href = "mailto: efitnessntherapy@gmail.com" class="header-contact__icon-container">
+                    <i class="header-contact__icon far fa-envelope"></i>
+                </a>
+            
+                <a href = "tel: 07586328423" class="header-contact__icon-container">
+                    <i class="header-contact__icon fas fa-phone"></i>
+                </a>
+            
+            
             <a href = "#" class="cta cta--primary header-contact__cta">
-
+                BOOK NOW
             </a>
         </div>
     </div>
-    <nav class="nav container">
-        <div class="nav__item">
-
-        </div>
-    </nav>
+    <div class="nav">
+        <nav class="container nav-content">
+            
+                <a href = "http://localhost:4000/" class="nav-item">
+                    Home
+                </a>
+            
+                <a href = "http://localhost:4000/about" class="nav-item">
+                    About
+                </a>
+            
+                <a href = "http://localhost:4000/testimonials" class="nav-item">
+                    Testimonials
+                </a>
+            
+                <a href = "http://localhost:4000/#benefits" class="nav-item">
+                    Benefits
+                </a>
+            
+                <a href = "http://localhost:4000/#services" class="nav-item">
+                    Services
+                </a>
+            
+                <a href = "http://localhost:4000/contact" class="nav-item">
+                    Contact
+                </a>
+            
+        </nav>
+    </div>
 </header>
     <section class="hero">
     <div class="container container--section hero-content">
@@ -47,16 +78,22 @@
     </div>
 </section>
 
-<section class="subhero"></section>
+<section class="subhero">
+    <div class="subhero-content container">
+        <span class="subhero-preheader">Do you suffer from aches and strains?</span>
+        <h2 class="section-header subhero-header">Sports therapy treatment can help.</h2>
+        <span class="subhero-text">For treatment of sport injuries, ligament sprains, joint pain, muscle strains, back pain and neck pain. If any of these conditions apply to you, don't hesitate to get in touch via the <a class = "subhero-link" href="/contact">contact</a> page for a chat!</span>
+    </div>
+</section>
 
 <section class="intro">
     <div class = "container container--section intro-content">
-        <h2 class="section-header intro-header"></h2>
-        <hr class="hr--green">
+        <h2 class="section-header intro-header">Welcome to efitnessntherapy!</h2>
+        <div class="hr hr--green"></div>
         <div class="intro-welcome">
-            <p class="intro-welcome__text"></p>
-            <img src="" alt="" class="intro-welcome__image">
-            <p class="intro-welcome__footer"></p>
+            <p class="intro-welcome__text">Hi, my name's Ellaine. As a sport remedial therapist I see myself as a movement expert. I assist with optimising quality of life through prescribed exercise, pain management, hands-on-care, and client education. Take a look yourself at some of the many benefits of physical therapy.</p>
+            <img src="http://localhost:4000/assets/img/ellaine.jpg" alt="" class="intro-welcome__image">
+            <p class="intro-welcome__footer">I do not diagnose but I will refer should I see the need to. As a part of my services, I create personalised treatment plans that help clients improve mobility, manage chronic conditions, recover from injury, and prevent future injury and chronic disease.</p>
         </div>
     
         <hr class="hr--green">
@@ -76,7 +113,7 @@
     </div>
 </section>
 
-<section class="therapy">
+<section class="therapy" id = "benefits">
     <div class="container container--section therapy-content">
         <h2 class="section-header therapy-header">How can sports therapy treatment help you?</h2>
         <div class="therapy-grid">
@@ -95,7 +132,7 @@
     </div>
 </section>
 
-<section class="services">
+<section class="services" id = "services">
     <div class="container container--section services-content">
         <h2 class="section-header services-header">Other Services</h2>
         <div class="services-grid">

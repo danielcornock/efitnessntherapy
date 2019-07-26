@@ -1,0 +1,48 @@
+.cta{
+    display: block;
+    width: 170px;
+    height: 45px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    transition: 250ms;
+
+    &--primary{
+        background-color: $primary;
+        color: white;
+
+        &:hover{
+            background-color: darken($primary,5%);
+        }
+    }
+
+    &--secondary{
+        border: 2px solid $primary;
+        color: $primary;
+    }
+
+}
+
+.highlight{
+    &--green{
+        border-top: 4px solid $primary;
+    }
+}
+
+.section-header{
+    font-size: var(--large-text);
+    text-align: center;
+    margin-bottom: var(--spacing--lrg);
+}
+
+.hr{
+    &--green{
+        background-color: rgba($primary--baby,0.5);
+    }
+    height: 3px;
+    width: 100%;
+}

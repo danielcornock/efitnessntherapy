@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: About
+  link: /about
+- name: Testimonials
+  link: /testimonials
+- name: Benefits
+  link: /#benefits
+- name: Services
+  link: /#services
+- name: Contact
+  link: /contact

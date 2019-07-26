@@ -1,0 +1,35 @@
+$primary--dark: #22773F;
+$primary: #2FAC5A;
+$primary--pale: #7FBA93;
+$primary--baby: #A2E3B8;
+$secondary: #E79A6D;
+$text: #444;
+
+$tablet-width: 1024px;
+$phone-width: 450px;
+
+@mixin mobile() {
+    @media (max-width: #{$phone-width}){
+        @content;
+    }
+}
+
+:root{
+    --title-text: 60px;
+    --large-text: 35px;
+    --sub-text: 25px;
+    --med-text: 22px;
+
+    --spacing--lrg: 70px;
+    --spacing--std: 20px;
+
+
+    @include mobile{
+        --title-text: 40px;
+        --large-text: 25px;
+        --sub-text: 20px;
+
+
+    }
+
+}
