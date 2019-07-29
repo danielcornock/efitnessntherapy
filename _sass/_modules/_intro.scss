@@ -8,10 +8,10 @@
         display: grid;
         align-items: center;
         grid-template-columns: 1fr auto;
-        grid-gap: var(--spacing--lrg);
+        grid-column-gap: var(--spacing--lrg);
         grid-template-areas:
             "text image"
-            "footer footer";
+            "footer image";
 
         &__text{
             grid-area: text;
@@ -28,9 +28,33 @@
         &__footer{
             grid-area: footer;
             font-size: var(--med-text);
-            text-align: center;
             font-weight: 500;
             color: $secondary;
+        }
+    }
+
+    &-about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+
+        &__entry{
+            text-align: center;
+        }
+
+        &__header{
+            font-size: var(--sub-text);
+            color: $primary--dark;
+            margin-bottom: 15px;
+        }
+
+        &__text{
+            font-size: var(--std-text);
+            margin-bottom: 25px;
+        }
+
+        &__button{
+            margin: auto;
         }
     }
 }

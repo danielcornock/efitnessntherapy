@@ -14,13 +14,20 @@ $phone-width: 450px;
     }
 }
 
+@mixin tablet() {
+    @media (max-width: #{$tablet-width}){
+        @content;
+    }
+}
+
 :root{
     --title-text: 60px;
     --large-text: 35px;
     --sub-text: 25px;
     --med-text: 22px;
+    --std-text: 18px;
 
-    --spacing--lrg: 70px;
+    --spacing--lrg: 100px;
     --spacing--std: 20px;
 
 
@@ -28,6 +35,7 @@ $phone-width: 450px;
         --title-text: 40px;
         --large-text: 25px;
         --sub-text: 20px;
+        --med-text: 18px;
 
 
     }

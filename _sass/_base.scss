@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,800');
 
 *, *::after, *::before{
     margin: 0;
@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Poppins', open-sans;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container{
@@ -20,4 +20,8 @@ body{
     &--section{
         padding: var(--spacing--lrg) var(--spacing--std);
     }
+}
+
+.orange{
+    color: $secondary;
 }

@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,800");
 :root {
   --title-text: 60px;
   --large-text: 35px;
   --sub-text: 25px;
   --med-text: 22px;
-  --spacing--lrg: 70px;
+  --std-text: 18px;
+  --spacing--lrg: 100px;
   --spacing--std: 20px;
 }
 
@@ -13,6 +14,7 @@
     --title-text: 40px;
     --large-text: 25px;
     --sub-text: 20px;
+    --med-text: 18px;
   }
 }
 
@@ -28,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', open-sans;
+  font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -39,6 +41,10 @@ body {
 
 .container--section {
   padding: var(--spacing--lrg) var(--spacing--std);
+}
+
+.orange {
+  color: #E79A6D;
 }
 
 .cta {
@@ -88,6 +94,7 @@ body {
 .hr {
   height: 3px;
   width: 100%;
+  margin: 50px auto;
 }
 
 .hr--green {
@@ -169,7 +176,8 @@ body {
 }
 
 .nav {
-  background-color: #7FBA93;
+  background: -webkit-gradient(linear, left top, right bottom, from(#7FBA93), to(#5ea877));
+  background: linear-gradient(to bottom right, #7FBA93, #5ea877);
 }
 
 .nav-content {
@@ -240,7 +248,8 @@ body {
 }
 
 .subhero {
-  background-color: #7FBA93;
+  background: -webkit-gradient(linear, left top, right bottom, from(#22773F), to(#1c6335));
+  background: linear-gradient(to bottom right, #22773F, #1c6335);
 }
 
 .subhero-content {
@@ -249,14 +258,27 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subhero-content__image {
+  width: 300px;
+  margin-left: 30px;
+}
+
+@media (max-width: 1024px) {
+  .subhero-content__image {
+    display: none;
+  }
 }
 
 .subhero-preheader {
-  color: #22773F;
+  color: #E79A6D;
   font-size: var(--med-text);
 }
 
@@ -267,13 +289,12 @@ body {
 }
 
 .subhero-text {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: var(--med-text);
-  max-width: 800px;
 }
 
 .subhero-link {
-  color: #22773F;
+  color: #E79A6D;
 }
 
 .intro-header {
@@ -290,8 +311,8 @@ body {
           align-items: center;
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
-  grid-gap: var(--spacing--lrg);
-      grid-template-areas: "text image" "footer footer";
+  grid-column-gap: var(--spacing--lrg);
+      grid-template-areas: "text image" "footer image";
 }
 
 .intro-welcome__text {
@@ -305,6 +326,7 @@ body {
 
 .intro-welcome__image {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: image;
   border-radius: 300px;
@@ -315,10 +337,208 @@ body {
 .intro-welcome__footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: footer;
   font-size: var(--med-text);
-  text-align: center;
   font-weight: 500;
   color: #E79A6D;
+}
+
+.intro-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.intro-about__entry {
+  text-align: center;
+}
+
+.intro-about__header {
+  font-size: var(--sub-text);
+  color: #22773F;
+  margin-bottom: 15px;
+}
+
+.intro-about__text {
+  font-size: var(--std-text);
+  margin-bottom: 25px;
+}
+
+.intro-about__button {
+  margin: auto;
+}
+
+.therapy {
+  background: -webkit-gradient(linear, left top, right bottom, from(#A2E3B8), to(#7bd79a));
+  background: linear-gradient(to bottom right, #A2E3B8, #7bd79a);
+}
+
+.therapy-header {
+  color: #2FAC5A;
+}
+
+.therapy-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.therapy-entry {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  grid-gap: var(--spacing--std);
+}
+
+.therapy-entry__icon-container {
+  height: 60px;
+  width: 60px;
+  background-color: #E79A6D;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.therapy-entry__icon {
+  color: white;
+  font-size: 26px;
+}
+
+.therapy-entry__header {
+  font-size: var(--med-text);
+  color: #22773F;
+}
+
+.therapy-entry__text {
+  font-size: var(--std-text);
+  color: #333;
+}
+
+.testimonials {
+  background-color: #2FAC5A;
+}
+
+.testimonials-header {
+  color: white;
+}
+
+.testimonials-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.testimonials-bubbles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.testimonials-bubbles__entry {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.testimonials-bubbles__entry:last-of-type {
+  margin-right: 0;
+}
+
+.testimonials-bubbles__entry:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #7FBA93;
+}
+
+.testimonials-bubbles__entry--active {
+  background-color: #22773F;
+}
+
+.testimonial-container {
+  width: 100vw;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.testimonial-array {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100%)[5];
+      grid-template-columns: repeat(5, 100%);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.testimonial-entry {
+  text-align: center;
+}
+
+.testimonial-author {
+  font-size: var(--large-text);
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.testimonial-content {
+  font-size: var(--med-text);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonial-nav {
+  top: 50%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 40px;
+  z-index: 10;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.testimonial-nav:hover {
+  color: white;
+}
+
+.testimonial-nav--right {
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.testimonial-nav--left {
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }

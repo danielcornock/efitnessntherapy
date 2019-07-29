@@ -1,0 +1,49 @@
+.therapy{
+    background: linear-gradient(to bottom right, $primary--baby, darken($primary--baby, 10%));
+    &-header{
+        color: $primary;
+    }
+    &-content{
+
+    }
+
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+
+    &-entry{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: var(--spacing--std);
+        &__icon-container{
+            height: 60px;
+            width: 60px;
+            background-color: $secondary;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__icon{
+            color: white;
+            font-size: 26px;
+        }
+
+        &__content{
+            
+        }
+
+        &__header{
+            font-size: var(--med-text);
+            color: $primary--dark;
+        }
+
+        &__text{
+            font-size: var(--std-text);
+            color: #333;
+        }
+    }
+}

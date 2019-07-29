@@ -50,7 +50,7 @@
 }
 
 .nav{
-    background-color: $primary--pale;
+    background: linear-gradient(to bottom right, $primary--pale, darken($primary--pale, 10%));
     &-content{
         padding-top: 0;
         padding-bottom: 0;
