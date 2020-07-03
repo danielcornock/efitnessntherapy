@@ -37,6 +37,7 @@
 .branding{
     display: flex;
     align-items: center;
+    text-decoration: none;
     &-text{
         font-size: var(--large-text);
         color: $primary;
@@ -60,6 +61,10 @@
         display: inline-block;
         color: white;
         text-decoration: none;
+
+        &--active{
+            background-color: rgba(black,0.05);
+        }
 
         &:hover{
             background-color: $primary;

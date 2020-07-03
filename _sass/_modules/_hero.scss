@@ -2,6 +2,7 @@
     background-image: url("assets/img/hero.jpg");
     background-size: cover;
     background-position: center;
+
     &-content{
         display: flex;
         flex-direction: column;
@@ -40,7 +41,7 @@
 }
 
 .subhero{
-    background: linear-gradient(to bottom right, $primary--dark, darken($primary--dark, 5%));
+    background: linear-gradient(to right, $primary, lighten($primary--pale,10%));
 
     &-content{
         padding-top: 50px;
@@ -62,7 +63,7 @@
         }
     }
     &-preheader{
-        color: $secondary;
+        color: white;
         font-size: var(--med-text);
     }
 

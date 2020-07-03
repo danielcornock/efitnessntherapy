@@ -1,11 +1,12 @@
 <header class="header highlight--green">
     <div class="header-upper container">
-        <div class="branding">
+        <a href = "{{ site.url }}"class="branding">
             <span class="branding-text"><span class="orange">e</span>fitness<span class="orange">n</span>therapy</span><i class="branding-logo fas fa-dumbbell"></i>
-        </div>
+        </a>
         <div class="header-contact">
             {% for item in site.data.social-icons %}
-                <a href = "{{ item.link }}" class="header-contact__icon-container">
+                <a href = "{{ item.link }}"
+                    class="header-contact__icon-container">
                     <i class="header-contact__icon {{ item.code }}"></i>
                 </a>
             {% endfor %}
@@ -18,8 +19,10 @@
     <div class="nav">
         <nav class="container nav-content">
             {% for item in site.data.navigation %}
-                <a href = "{{ site.url }}{{ item.link }}" class="nav-item">
-                    {{ item.name }}
+                <a href = "{{ site.url }}{{ item.link }}"
+                    class="nav-item
+                    {% if item.name == page.title %} nav-item--active {% endif %}">
+                        {{ item.name }}
                 </a>
             {% endfor %}
         </nav>

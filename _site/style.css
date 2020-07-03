@@ -161,6 +161,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
 }
 
 .branding-text {
@@ -190,6 +191,10 @@ body {
   display: inline-block;
   color: white;
   text-decoration: none;
+}
+
+.nav-item--active {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .nav-item:hover {
@@ -248,8 +253,8 @@ body {
 }
 
 .subhero {
-  background: -webkit-gradient(linear, left top, right bottom, from(#22773F), to(#1c6335));
-  background: linear-gradient(to bottom right, #22773F, #1c6335);
+  background: -webkit-gradient(linear, left top, right top, from(#2FAC5A), to(#a0ccaf));
+  background: linear-gradient(to right, #2FAC5A, #a0ccaf);
 }
 
 .subhero-content {
@@ -278,7 +283,7 @@ body {
 }
 
 .subhero-preheader {
-  color: #E79A6D;
+  color: white;
   font-size: var(--med-text);
 }
 
@@ -311,7 +316,7 @@ body {
           align-items: center;
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
-  grid-column-gap: var(--spacing--lrg);
+  grid-column-gap: var(--spacing--std);
       grid-template-areas: "text image" "footer image";
 }
 
@@ -322,6 +327,17 @@ body {
   font-size: var(--sub-text);
   color: #22773F;
   font-weight: 500;
+  position: relative;
+}
+
+.intro-welcome__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  height: 4px;
+  width: 80px;
+  background-color: #2FAC5A;
 }
 
 .intro-welcome__image {
@@ -341,6 +357,17 @@ body {
   font-size: var(--med-text);
   font-weight: 500;
   color: #E79A6D;
+  position: relative;
+}
+
+.intro-welcome__footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+  height: 4px;
+  width: 40px;
+  background-color: #E79A6D;
 }
 
 .intro-about {
@@ -370,9 +397,35 @@ body {
   margin: auto;
 }
 
+.quote {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(70, 67, 83, 0.5)), to(rgba(70, 67, 83, 0.5))), url("assets/img/buddha.jpg");
+  background: linear-gradient(rgba(70, 67, 83, 0.5), rgba(70, 67, 83, 0.5)), url("assets/img/buddha.jpg");
+  color: white;
+  position: relative;
+  background-size: 150%;
+  background-position: 0% 52%;
+  background-attachment: fixed;
+}
+
+.quote__content {
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+  padding: 20px 0;
+  max-width: 500px;
+}
+
+.quote__author {
+  font-size: 14px;
+  color: #E79A6D;
+  display: block;
+  margin-top: 10px;
+}
+
 .therapy {
-  background: -webkit-gradient(linear, left top, right bottom, from(#A2E3B8), to(#7bd79a));
-  background: linear-gradient(to bottom right, #A2E3B8, #7bd79a);
+  background: -webkit-gradient(linear, left top, right bottom, from(#f0fbf4), to(#c9efd6));
+  background: linear-gradient(to bottom right, #f0fbf4, #c9efd6);
 }
 
 .therapy-header {
@@ -385,6 +438,8 @@ body {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .therapy-entry {
@@ -427,7 +482,10 @@ body {
 }
 
 .testimonials {
-  background-color: #2FAC5A;
+  background-image: url("assets/img/testimonials.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .testimonials-header {
@@ -484,11 +542,17 @@ body {
 }
 
 .testimonial-container {
-  width: 100vw;
+  width: 100%;
   max-width: 900px;
   margin: auto;
   overflow: hidden;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-container {
+    width: 90%;
+  }
 }
 
 .testimonial-array {
@@ -508,12 +572,12 @@ body {
   font-size: var(--large-text);
   margin-bottom: 15px;
   font-weight: 500;
-  color: white;
+  color: #2FAC5A;
 }
 
 .testimonial-content {
   font-size: var(--med-text);
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 .testimonial-nav {
@@ -532,13 +596,13 @@ body {
 }
 
 .testimonial-nav--right {
-  right: 0;
+  right: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .testimonial-nav--left {
-  left: 0;
+  left: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }

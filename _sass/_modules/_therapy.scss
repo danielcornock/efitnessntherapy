@@ -1,5 +1,5 @@
 .therapy{
-    background: linear-gradient(to bottom right, $primary--baby, darken($primary--baby, 10%));
+    background: linear-gradient(to bottom right, lighten($primary--baby,20%), lighten($primary--baby, 10%));
     &-header{
         color: $primary;
     }
@@ -11,6 +11,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
+        max-width: 1000px;
+        margin: auto;
     }
 
     &-entry{

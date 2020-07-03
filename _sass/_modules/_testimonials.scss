@@ -1,5 +1,9 @@
 .testimonials{
-    background-color: $primary;
+    background-image: url("assets/img/testimonials.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 
     &-header{
         color: white;
@@ -42,11 +46,14 @@
 
 .testimonial{
     &-container{
-        width: 100vw;
+        width: 100%;
         max-width: 900px;
         margin: auto;
         overflow: hidden;
         margin-bottom: 30px;
+        @media (max-width: $tablet-width){
+            width: 90%;
+        }
     }
 
     &-array{
@@ -63,12 +70,12 @@
         font-size: var(--large-text);
         margin-bottom: 15px;
         font-weight: 500;
-        color: white;
+        color: $primary;
     }
 
     &-content{
         font-size: var(--med-text);
-        color: rgba(white,0.8);
+        color: white;
     }
 
     &-nav{
@@ -85,12 +92,12 @@
         }
 
         &--right{
-            right: 0;
+            right: 20px;
             transform: translateY(-50%);
         }
 
         &--left{
-            left: 0;
+            left: 20px;
             transform: translateY(-50%);
         }
     }
