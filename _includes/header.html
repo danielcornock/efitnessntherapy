@@ -1,30 +1,37 @@
 <header class="header highlight--green">
-    <div class="header-upper container">
-        <a href = "{{ site.url }}"class="branding">
-            <span class="branding-text"><span class="orange">e</span>fitness<span class="orange">n</span>therapy</span><i class="branding-logo fas fa-dumbbell"></i>
-        </a>
-        <div class="header-contact">
-            {% for item in site.data.social-icons %}
-                <a href = "{{ item.link }}"
-                    class="header-contact__icon-container">
-                    <i class="header-contact__icon {{ item.code }}"></i>
-                </a>
-            {% endfor %}
-            
-            <a href = "#" class="cta cta--primary header-contact__cta">
-                BOOK NOW
-            </a>
-        </div>
+  <div class="header-upper container">
+    <a href="{{ site.url }}" class="branding">
+      <span class="branding-text"
+        ><span class="orange">e</span>fitness<span class="orange">n</span
+        >therapy</span
+      ><i class="branding-logo fas fa-dumbbell"></i>
+    </a>
+    <div class="header-contact">
+      {% for item in site.data.social-icons %}
+      <a href="{{ item.link }}" class="header-contact__icon-container">
+        <i class="header-contact__icon {{ item.code }}"></i>
+      </a>
+      {% endfor %}
+
+      <a
+        href="mailto: efitnessntherapy@gmail.com"
+        class="cta cta--primary header-contact__cta"
+      >
+        BOOK NOW
+      </a>
     </div>
-    <div class="nav">
-        <nav class="container nav-content">
-            {% for item in site.data.navigation %}
-                <a href = "{{ site.url }}{{ item.link }}"
-                    class="nav-item
-                    {% if item.name == page.title %} nav-item--active {% endif %}">
-                        {{ item.name }}
-                </a>
-            {% endfor %}
-        </nav>
-    </div>
+  </div>
+  <div class="nav">
+    <nav class="container nav-content">
+      {% for item in site.data.navigation %}
+      <a
+        href="{{ site.url }}{{ item.link }}"
+        class="nav-item
+                    {% if item.name == page.title %} nav-item--active {% endif %}"
+      >
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
 </header>

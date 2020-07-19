@@ -7,8 +7,8 @@ layout: default
     <h1 class="hero-lead">{{ page.lead }}</h1>
     <span class="hero-sublead">{{ page.sublead }}</span>
     <div class="hero-button__container">
-      <a href="" class="cta cta--primary hero-button">BOOK NOW</a>
-      <a href="" class="cta cta--secondary hero-button">REVIEWS</a>
+      <a href="mailto:efitnessntherapy@gmail.com" class="cta cta--primary hero-button">BOOK NOW</a>
+      <a href="#testimonials" class="cta cta--secondary hero-button">REVIEWS</a>
     </div>
   </div>
 </section>
@@ -35,12 +35,12 @@ layout: default
   </div>
 </section>
 
-<section class="intro">
+<section class="intro" id="about">
   <div class="container container--section intro-content">
     <h2 class="section-header intro-header">Welcome to efitnessntherapy!</h2>
     <div class="intro-welcome">
       <p class="intro-welcome__text">
-        Hi, my name's Ellaine. As a sport remedial therapist I see myself as a
+        Hi, my name's Ellayne. As a sport remedial therapist I see myself as a
         movement expert. I assist with optimising quality of life through
         prescribed exercise, pain management, hands-on-care, and client
         education. Take a look yourself at some of the many benefits of physical
@@ -59,9 +59,9 @@ layout: default
       </p>
     </div>
 
-    <div class="hr hr--green"></div>
+    <!-- <div class="hr hr--green"></div> -->
 
-    <div class="intro-about">
+    <!-- <div class="intro-about">
       <div class="intro-about__entry">
         <h3 class="section-subheader intro-about__header">About Me</h3>
         <p class="intro-about__text">
@@ -85,7 +85,7 @@ layout: default
           dolor. Qui iste soluta tempora ex eos quis!
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -126,7 +126,8 @@ layout: default
 
 <section class="services" id="services">
   <div class="container container--section services-content">
-    <h2 class="section-header services-header">Other Services</h2>
+    <h2 class="section-header services-header">Watch me in action</h2>
+    <video class="services-video" src="{{ 'assets/videos/example.mp4' | absolute_url }}" controls  type="video/mp4"></video>
     <div class="services-grid">
       <div class="services-entry">
         <img src="" alt="" class="services-entry__image" />
