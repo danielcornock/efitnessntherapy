@@ -324,7 +324,7 @@ video {
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
   grid-column-gap: var(--spacing--std);
-      grid-template-areas: "text image" "footer image";
+      grid-template-areas: 'text image' 'footer image';
 }
 
 .intro-welcome__text {
@@ -338,7 +338,7 @@ video {
 }
 
 .intro-welcome__text::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -15px;
@@ -368,21 +368,13 @@ video {
 }
 
 .intro-welcome__footer::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -15px;
   height: 4px;
   width: 40px;
   background-color: #E79A6D;
-}
-
-.intro-about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
 }
 
 .intro-about__entry {

@@ -1,109 +1,104 @@
-.intro{
-    &-header{
-        color: $primary;
-        font-size: 50px;
+.intro {
+  &-header {
+    color: $primary;
+    font-size: 50px;
+  }
+  &-welcome {
+    margin: var(--spacing--lrg) 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: var(--spacing--std);
+    grid-template-areas:
+      'text image'
+      'footer image';
+
+    &__text {
+      grid-area: text;
+      font-size: var(--sub-text);
+      color: $primary--dark;
+      font-weight: 500;
+
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        height: 4px;
+        width: 80px;
+        background-color: $primary;
+      }
     }
-    &-welcome{
-        margin: var(--spacing--lrg) 0;
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr auto;
-        grid-column-gap: var(--spacing--std);
-        grid-template-areas:
-            "text image"
-            "footer image";
+    &__image {
+      grid-area: image;
+      border-radius: 300px;
+      height: auto;
+      width: 350px;
+    }
+    &__footer {
+      grid-area: footer;
+      font-size: var(--med-text);
+      font-weight: 500;
+      color: $secondary;
 
-        &__text{
-            grid-area: text;
-            font-size: var(--sub-text);
-            color: $primary--dark;
-            font-weight: 500;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        height: 4px;
+        width: 40px;
+        background-color: $secondary;
+      }
+    }
+  }
 
-            position: relative;
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                top: -15px;
-                height: 4px;
-                width: 80px;
-                background-color: $primary;
-            }
-        }
-        &__image{
-            grid-area: image;
-            border-radius: 300px;
-            height: auto;
-            width: 350px;
-        }
-        &__footer{
-            grid-area: footer;
-            font-size: var(--med-text);
-            font-weight: 500;
-            color: $secondary;
-
-            position: relative;
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                top: -15px;
-                height: 4px;
-                width: 40px;
-                background-color: $secondary;
-            }
-        }
+  &-about {
+    &__entry {
+      text-align: center;
     }
 
-    &-about{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
-
-        &__entry{
-            text-align: center;
-        }
-
-        &__header{
-            font-size: var(--sub-text);
-            color: $primary--dark;
-            margin-bottom: 15px;
-        }
-
-        &__text{
-            font-size: var(--std-text);
-            margin-bottom: 25px;
-        }
-
-        &__button{
-            margin: auto;
-        }
+    &__header {
+      font-size: var(--sub-text);
+      color: $primary--dark;
+      margin-bottom: 15px;
     }
+
+    &__text {
+      font-size: var(--std-text);
+      margin-bottom: 25px;
+    }
+
+    &__button {
+      margin: auto;
+    }
+  }
 }
 
-.quote{
-    background: linear-gradient(rgba(#464353, 0.5), rgba(#464353, 0.5)),
-    url("assets/img/buddha.jpg");
-    color: white;
+.quote {
+  background: linear-gradient(rgba(#464353, 0.5), rgba(#464353, 0.5)),
+    url('assets/img/buddha.jpg');
+  color: white;
+  position: relative;
+  background-size: 150%;
+  background-position: 0% 52%;
+  background-attachment: fixed;
+
+  &__content {
+    font-size: 24px;
+    font-weight: 500;
     position: relative;
-    background-size: 150%;
-    background-position: 0% 52%;
-    background-attachment: fixed;
+    z-index: 10;
+    padding: 20px 0;
+    max-width: 500px;
+  }
 
-    
-    &__content{
-        font-size: 24px;
-        font-weight: 500;
-        position: relative;
-        z-index: 10;
-        padding: 20px 0;
-        max-width: 500px;
-    }
-
-    &__author{
-        font-size: 14px;
-        color: $secondary;
-        display: block;
-        margin-top: 10px;
-    }
+  &__author {
+    font-size: 14px;
+    color: $secondary;
+    display: block;
+    margin-top: 10px;
+  }
 }
